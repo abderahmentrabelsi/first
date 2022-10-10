@@ -1,0 +1,4 @@
+<div *ngFor="let invoiceee of invoice" >
+Facture:{{invoiceee.idFacture}}
+<a [routerLink]="['/details/',invoiceee.idFacture,invoiceee.active]">Details</a>
+</div>

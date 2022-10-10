@@ -1,0 +1,25 @@
+<div *ngFor="let user of users" [ngStyle]="{'backgroundColor':user.email=='mila@kunis.com'?'red':'pink'}">
+    {{user.birthDate}}
+    {{user.email}}
+    {{user.firstName}}
+    {{user.idCustomer}}
+    {{user.lastName}}
+    {{user.birthDate}}
+    {{user.profession}}
+    {{user.picture}}
+    {{user.password}}
+    <input type="button" class="btn btn-dark" value="delete user"(click)="deleteUser(user)">
+<div >   
+
+</div>    
+
+
+
+
+
+
+
+
+
+
+</div>

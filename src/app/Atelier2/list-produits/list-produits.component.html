@@ -1,0 +1,23 @@
+<p>list-produits works!</p>
+
+<div *ngFor="let p of listProduitt; let j = index" >
+    Produit:
+    <div *ngIf="index == j" >
+        {{msg.idProduit}}
+{{msg.code}}
+{{msg.libelle}}
+{{msg.prixUnitaire}}
+{{msg.tauxTVA}}
+    </div>
+
+    
+    <input type="button" class="btn btn-dark" value="show Det"(click)="showProduit(j)" [ngStyle]="{'background-color': p.prixUnitaire <=50 ? 'blue' : null }">
+
+<button [disabled]="!j ? 'disabled': p.tauxTVA<0.1" (click)="tva(p)" >   
+    <div class="btn-primary">ajuster tva</div>
+    
+   
+  </button>
+  
+
+</div>
